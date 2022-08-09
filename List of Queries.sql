@@ -142,11 +142,13 @@ INNER JOIN PLAYERS_TURNS
 ON TURNS.ID = PLAYERS_TURNS.TURNS_ID
 WHERE GAMES_ID = 001 AND IS_FINISHED = 1;
 
-SELECT * FROM PLAYERS;
-SELECT * FROM PLAYERS_TURNS;
-
 -- Promedio del tamaño de palabras utilizadas en Hangman
+SELECT AVG(COUNT(*)) AS "AVERAGE LENGTH"
+FROM SECRETLETTERS
+GROUP BY HANGEDMEN_ID;
 
 -- Mostrar Listado de los jugadores de Hangman y establecer si son mejores como guiver o guesser
 
+
 -- Mostrar listado de los jugadores de TTT y mostrar si son mejores con las X o las O
+
